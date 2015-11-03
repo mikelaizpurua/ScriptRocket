@@ -1,0 +1,116 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+	font-size: 30px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	padding: 15px 0;
+}
+
+.panel-body {
+	background-color: #B3D5FF;
+	border-color: black;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+.navbar-default {
+    background-color: #56A4B2;
+    border-color: #56A4B2;
+}
+
+// .navbar-default .navbar-nav > li > a {
+//     color: #B27F1E;
+// }
+
+// a {
+//     color: #FFBE45;
+//     text-decoration: none;
+// }
+
+#logoheader {
+    padding: 0;
+
+}
+
+#main_content {
+	#content {
+		float: none;
+	}
+	padding-bottom: 100px;
+
+.link {
+	padding: 2em 1em;
+	border-bottom: 1px solid #e9e9e9;
+	.title {
+
+		a {
+			color: #FF4500;
+		}
+	}
+}
+.comments_title {
+	margin-top: 2em;
+}
+#comments {
+	.comment {
+		padding: 1em 0;
+		border-top: 1px solid #E9E9E9;
+		.lead {
+			margin-bottom: 0;
+		}
+	}
+}
+}
+
+
+  /*==========  Mobile First Method  ==========*/
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (min-width : 320px) {
+        
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (min-width : 480px) {
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (min-width : 768px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
+
+    }
+
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
