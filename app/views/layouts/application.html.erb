@@ -1,3 +1,5 @@
+<!-- This section contains are application scripts and NAVBAR settings -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +22,6 @@
   </div>
 
 
-
       <div class="container">
         <div id="logo" class="navbar-brand" class="navbar-brand" href="#"><%= link_to "WebbyWood", root_path %></div>
 
@@ -28,7 +29,7 @@
           <% if user_signed_in? -%>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to 'Script List', links_path %></li>
-              <li><%= link_to 'Submit link', new_link_path %></li>
+              <li><%= link_to 'Submit Script', new_link_path %></li>
               <li><%= link_to 'Account', edit_user_registration_path %></li>
               <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
             </ul>
@@ -50,9 +51,7 @@
 
       <div id="content" class="col-md-9 center-block">
       
-      <a class="webbylogo" href="#">
-        <img alt="Brand" src="./assets/logo.png">
-      </a>
+
 
 
         <%= yield %>

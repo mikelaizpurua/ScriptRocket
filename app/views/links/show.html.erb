@@ -1,12 +1,24 @@
+<!-- When you click on a script from the homepage, this is the page you are taken too -->
+<!-- This section includes headers,script images, upvote/downvote likes -->
+
+
+<!--Script title -->
+
 <div class="page-header">
   <h1><a href="<%= @link.url %>"><%= @link.title %></a><br> <small>Submitted by <%= @link.user.email %></small></h1>
 </div>
 
+<!--Script Image -->
+<div class="script"> 
+	<%= image_tag @link.image.url(:medium) %>
+</div>
+
+<!--Visit URL button -->
 <div class="btn-group">
 	<%= link_to 'Visit URL', @link.url, class: "btn btn-primary" %>
 </div>
 
-
+<!--If user is the CURRENT user give them the option to edit or destory their post -->
 <% if @link.user == current_user -%>
 	<div class="btn-group">
 		<%= link_to 'Edit', edit_link_path(@link), class: "btn btn-default" %>
@@ -14,6 +26,7 @@
 	</div>
 <% end %>
 
+<!--Upvote and Down vote buttons -->
 <div class="btn-group pull-right">
 	<%= link_to like_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
 	<span class="glyphicon glyphicon-chevron-up"></span>
@@ -27,18 +40,25 @@
 		<% end %>
 </div>
 
+<!--This is the comment section where users can commment on the script -->
 <h3 class="comments_title">
 	<%= @link.comments.count %> Comments
 </h3>
 
+
 <div id="comments">
 	<%= render :partial => @link.comments %>
 </div>
-<%= simple_form_for [@link, Comment.new] do |f| %>
-<div class="field">
-	<%= f.text_area :body, class: "form-control" %>
-</div>
-<br>
-<%= f.submit "Add Comment", class: "btn btn-primary" %>
-<% end %>
+
+<% if user_signed_in? -%>
+	<%= simple_form_for [@link, Comment.new] do |f| %>
+	<div class="field">
+		<%= f.text_area :body, class: "form-control" %>
+	</div>
+	<br>
+	<%= f.submit "Add Comment", class: "btn btn-primary" %>
+	<% end %>
+<% end -%>
+
+<!--End of comment section -->
 

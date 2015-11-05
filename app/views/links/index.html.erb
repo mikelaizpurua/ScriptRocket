@@ -1,22 +1,36 @@
-<% @links.each do |link| %>
-  <div class="link" display="inblock">
-    <h2>
-      <%= link_to link.title, link %><br>
-      <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small>
-    </h2>
+<!-- This code block is for the MAIN Script list aka the home page -->
+<!-- We are currently running into issues with displaying title and functional link (11/5/15 @ 9am ET) -->
 
-    <div class="btn-group">
-      <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
-      <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-        <span class="glyphicon glyphicon-chevron-up"></span>
+
+<% @links.each do |link| %>
+
+
+<div class="link" display="inblock">
+  <h2>
+    <td><%= image_tag link.image.url(:medium) %></td>
+    <%= link_to link.title, link %><br>
+    <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small>
+  </h2>
+
+   <div class="btn-group">
+    <a class="btn btn-default btn-sm" href="<%= link.url %>">
+      View Script
+    </a>
+
+    <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-chevron-up"></span>
         Upvote
-        <%= link.get_upvotes.size %>
-      <% end %>
-      <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
-        <span class="glyphicon glyphicon-chevron-down">
+      <%= link.get_upvotes.size %>
+    <% end %>
+
+    <%= link_to dislike_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
+      <span class="glyphicon glyphicon-chevron-down">
         Downvote
-        <%= link.get_downvotes.size %>
-      <% end %>
+      <%= link.get_downvotes.size %>
+    <% end %>
+
     </div>
   </div>
-<% end %>
+
+  <% end %>
+

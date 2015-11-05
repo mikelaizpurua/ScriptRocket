@@ -1,3 +1,7 @@
+<!-- This code block is for the comment section in the Script Show -->
+<!-- This code block is for the comment section in the Script Show -->
+
+
 <%= div_for(comment) do %>
 	<div class="comments_wrapper clearfix">
 		<div class="pull-left">
@@ -5,6 +9,7 @@
 			<p><small>Submitted <strong><%= time_ago_in_words(comment.created_at) %> ago</strong> by <%= comment.user.email %></small></p>
 		</div>
 
+<!-- Notice the if comment.user == current.user. This allows only ONE person to destroy -->
 		<div class="btn-group pull-right">
 			<% if comment.user == current_user %>
 				<%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-sm btn-default" %>

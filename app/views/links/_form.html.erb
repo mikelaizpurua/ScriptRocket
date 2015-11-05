@@ -1,5 +1,10 @@
+<!-- This code block is for the SCRIPT UPLOAD section-->
+<!-- The Form groups below are the different fields in our "Panel-body" -->
 
-<%= form_for(@link) do |f| %>
+
+<!--Code block to help prevent unknown formats upload -->
+<%= form_for @link, html: { multipart: true } do |f| %>
+
   <% if @link.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@link.errors.count, "error") %> prohibited this link from being saved:</h2>
@@ -12,17 +17,31 @@
     </div>
   <% end %>
 
+<!--This is form where users upload image, name script, etc.. -->
+
   <div class="panel panel-default">
     <div class="panel-body">
       
   <div class="form-group">
-    <%= f.label :title %><br>
+    <%= f.label :Cover_Image %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Screenplay_title %><br>
     <%= f.text_field :title, class: "form-control" %>
   </div>
+
   <div class="form-group">
-    <%= f.label :url %><br>
+    <%= f.label :Written_By %><br>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Direct_url %><br>
     <%= f.text_field :url, class: "form-control" %>
   </div>
+
   <div class="form-group">
     <%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
   </div>
