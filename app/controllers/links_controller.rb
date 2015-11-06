@@ -1,5 +1,6 @@
 class LinksController < ApplicationController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
+  before_action :link_params, only: [:create]
   before_filter :authenticate_user!, except: [:index, :show]
 
   # GET /links
@@ -26,6 +27,7 @@ class LinksController < ApplicationController
   # POST /links.json
   def create
     @link = current_user.links.build(link_params)
+
 
     respond_to do |format|
       if @link.save
@@ -83,7 +85,6 @@ class LinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:title, :url)
-      params.require(:link).permit(:description, :image)
+      params.require(:link).permit(:title, :url, :description, :image, :written_by)
     end
 end
