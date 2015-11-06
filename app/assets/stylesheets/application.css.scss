@@ -48,8 +48,12 @@ body {
 }
 
 .navbar-default {
-    background-color: #56A4B2;
+    background-color: #A274FF;
     border-color: #56A4B2;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
 }
 
 
@@ -90,7 +94,7 @@ body {
     font-size: 18px;
     line-height: 1.3333333;
     border-radius: 6px;
-    color: red;
+    color: #A274FF;
 }
 
 
