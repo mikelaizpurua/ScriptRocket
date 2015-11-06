@@ -12,7 +12,7 @@
     <%= link_to link.title, link %><br>
   </h2>
     <h4><div>Written by</div><%= link.written_by %></h4>
-    <h5><div><strong>Plot:</strong></div><%= link.plot_description %></h5>
+    <h5><div><strong>Plot:</strong><i></div><%= link.plot_description %></h5></i>
     <h6><div><strong>Estimated Budget:</strong></div><%= link.estimated_budget %></h6>
     <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small>
   
