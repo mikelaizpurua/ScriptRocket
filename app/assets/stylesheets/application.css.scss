@@ -71,7 +71,7 @@ body {
 .title a {
       color: #FF4500;
     }
-// 
+//
 .comments_title {
     margin-top: 2em;
 }
@@ -85,17 +85,23 @@ body {
             margin-bottom: 0;
         }
 
-
+.btn-lg, .btn-group-lg > .btn {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    color: red;
+}
 
 
   /*==========  Mobile First Method  ==========*/
 
-    /* Custom, iPhone Retina */ 
+    /* Custom, iPhone Retina */
     @media only screen and (min-width : 320px) {
-        
+
     }
 
-    /* Extra Small Devices, Phones */ 
+    /* Extra Small Devices, Phones */
     @media only screen and (min-width : 480px) {
 
     }
