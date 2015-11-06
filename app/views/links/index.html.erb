@@ -5,13 +5,17 @@
 <% @links.each do |link| %>
 
 
+
 <div class="link" display="inblock">
   <h2>
     <td><%= image_tag link.image.url(:medium) %></td>
     <%= link_to link.title, link %><br>
-    <div>Written by</div><%= link.written_by %>
-    <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small>
   </h2>
+    <h4><div>Written by</div><%= link.written_by %></h4>
+    <h5><div><strong>Plot:</strong></div><%= link.plot_description %></h5>
+    <h6><div><strong>Estimated Budget:</strong></div><%= link.estimated_budget %></h6>
+    <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small>
+  
 
    <div class="btn-group">
     <a class="btn btn-default btn-sm" href="<%= link.url %>">

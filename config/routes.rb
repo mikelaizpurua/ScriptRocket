@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
   resources :scripts
   resources :scripts
   resources :comments

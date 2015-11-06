@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151106004415) do
+ActiveRecord::Schema.define(version: 20151106154852) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "link_id"
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20151106004415) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "written_by"
+    t.text     "plot_description"
+    t.string   "estimated_budget"
   end
 
   add_index "links", ["integer"], name: "index_links_on_integer"
