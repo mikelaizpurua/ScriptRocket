@@ -43,19 +43,6 @@ ActiveRecord::Schema.define(version: 20151106154852) do
 
   add_index "links", ["integer"], name: "index_links_on_integer"
 
-  create_table "scripts", force: :cascade do |t|
-    t.string   "description"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "user_id"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  add_index "scripts", ["user_id"], name: "index_scripts_on_user_id"
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
