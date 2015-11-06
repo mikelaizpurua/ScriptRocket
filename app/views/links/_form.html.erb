@@ -53,9 +53,35 @@
   </div>
 
   <div class="form-group" id="submitbutton">
-    <%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+    
   </div>
 
+<!-- Submit button that points to BOOTSTRAP Modal-->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Submit Script
+</button>
+
+<!-- Terms and Conditions Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+      </div>
+      <div class="modal-body">
+        <h4>WebbyWood Terms & Conditions</h4>
+        <p>All copyright, trademarks, design rights, patents and other intellectual property rights (registered and unregistered) in and on WebbyWood Services are assumed to belong to the User or third parties (which may include you or other users) uploading the desired script.</p>
+        <p>While WebbyWood encourages open-source community sharing of creative resources, we highly recommend one register their material under copyright. </p>
+        <p>Nothing in the Terms grants you a right or licence to use any trade mark, design right or copyright owned or controlled by WebbyWood or any other third party except as expressly provided in the Terms.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class= "btn btn-lg btn-danger" data-dismiss="modal">Cancel</button>
+        <%= f.submit "Submit Script", class: "btn btn-lg btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 </div>
 <% end %>

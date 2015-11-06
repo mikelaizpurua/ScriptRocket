@@ -15,3 +15,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+var ready = function() {
+    console.log("document is ready!");
+
+    $('#jsModalButton').click(function(){
+        console.log("Button clicked!");
+        $('#myModal').modal()
+    });
+
+    $('#jsdropdownmenu').click(function(){
+        console.log('dropdown button clicked');
+        $('.dropdown-menu').toggle('dropdown')
+    });
+}
+
+$(document).on('ready page:load', ready);
