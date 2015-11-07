@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :scripts
   resources :comments
   devise_for :users
+  get 'tags/:tag', to: 'links#index', as: :tag
   resources :links do
     member do
       put "like",    to: "links#upvote"

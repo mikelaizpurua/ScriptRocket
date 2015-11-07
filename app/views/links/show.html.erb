@@ -11,7 +11,7 @@
 
 
 <!--Script Image -->
-<div class="script"> 
+<div class="script">
 	<%= image_tag @link.image.url(:medium) %>
 </div>
 
@@ -61,6 +61,11 @@
 	<%= f.submit "Add Comment", class: "btn btn-primary" %>
 	<% end %>
 <% end -%>
+
+<% @link.tags.any? %>
+  <% @link.tags.each do |tag| %>
+  <%= link_to tag.name, tagged_url(:tag, tag.name) %>
+<% end %>
 
 <!--End of comment section -->
 
