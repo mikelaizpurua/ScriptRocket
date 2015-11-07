@@ -1,9 +1,8 @@
 <!-- When you click on a script from the homepage, this is the page you are taken too -->
 <!-- This section includes headers,script images, upvote/downvote likes -->
 
-
+<div class="container">
 <!--Script title -->
-
 <div class="page-header">
   <h1><a href="<%= @link.url %>"><%= @link.title %></a><br> <small>Submitted by <%= @link.user.email %></small></h1>
 </div>
@@ -23,8 +22,8 @@
 <!--If user is the CURRENT user give them the option to edit or destory their post -->
 <% if @link.user == current_user -%>
 	<div class="btn-group">
-		<%= link_to 'Edit', edit_link_path(@link), class: "btn btn-default" %>
-		<%= link_to 'Destroy', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
+		<%= link_to 'Edit Script', edit_link_path(@link), class: "btn btn-default" %>
+		<%= link_to 'Delete Script', @link, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
 	</div>
 <% end %>
 
@@ -62,10 +61,13 @@
 	<% end %>
 <% end -%>
 
+
 <% @link.tags.any? %>
   <% @link.tags.each do |tag| %>
   <%= link_to tag.name, tagged_url(:tag, tag.name) %>
 <% end %>
+
+</div>
 
 <!--End of comment section -->
 
