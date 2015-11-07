@@ -16,6 +16,9 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).on('ready page:load', ready);
+
+
 var ready = function() {
     console.log("document is ready!");
 
@@ -30,9 +33,8 @@ var ready = function() {
     });
 }
 
-$(document).ready(function () {
+$(document).on('ready page:load', function() {
     $(".player").mb_YTPlayer();
 });
 
 
-$(document).on('ready page:load', ready);
