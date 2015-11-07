@@ -86,6 +86,6 @@ class LinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:title, :url, :description, :image, :written_by, :plot_description, :estimated_budget, :tag_list => [])
+      params.require(:link).permit(:title, :url, :description, :image, :written_by, :plot_description, :estimated_budget, :tag_list)
     end
 end
