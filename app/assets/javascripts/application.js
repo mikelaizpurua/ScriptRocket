@@ -30,4 +30,9 @@ var ready = function() {
     });
 }
 
+$(document).ready(function () {
+    $(".player").mb_YTPlayer();
+});
+
+
 $(document).on('ready page:load', ready);
