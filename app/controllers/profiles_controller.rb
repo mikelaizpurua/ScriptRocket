@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_profile, only: [:show, :update, :destroy]
   before_action :profile_params, only: [:create]
 
   def index
@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-    @profile = Profile.find(set_profile)
+    @profile = current_user.profile
   end
 
   def create
