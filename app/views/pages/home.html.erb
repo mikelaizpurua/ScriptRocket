@@ -1,12 +1,27 @@
-<!--FRONTPAGE -->
-<!-- Page Content -->
-    <div class="container">
+<!--This section represents the MAIN SPLASH PAGE WITH VIDEO BACKGROUND -->
+
+<!--Video Section-->
+<div id="signinbody">
+<section class="content-section video-section">
+  <div class="pattern-overlay">
+    <a id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/u8eO5N7Gwag',containment:'.video-section', quality:'large', autoPlay:true, mute:true, opacity:1}"></a>
         <div class="row">
-            <div class="col-md-6 col-sm-12">
-                <h1>The Big Picture</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur eligendi.</p>
-            </div>
+          <div class="col-lg-12">
+              <div id="mainpagebuttons">
+                  <div id="signupmainbtn">
+                    <% if user_signed_in? -%>
+                      <%= link_to "Read Top Scripts", links_path, class: "btn btn-warning btn-lg" %>
+                    <% else %>
+                      <%= link_to "Log In", new_user_session_path, class: "btn btn-warning btn-lg" %>
+                      <%= link_to "Sign Up", new_user_registration_path, class: "btn btn-success btn-lg" %> 
+                    <% end %>
+                  </div>
+                  <h1>Write. Share. Produce.</h1>
+                  <h3>Distrupting Hollywood One Script At A Time</h3>
+              </div>
+          </div>
         </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
+  </div>
+</section>
+</div>
+<!--Video Section Ends Here-->

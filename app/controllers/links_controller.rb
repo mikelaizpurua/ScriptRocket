@@ -2,6 +2,7 @@ class LinksController < ApplicationController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
   before_action :link_params, only: [:create]
   before_filter :authenticate_user!, except: [:index, :show]
+  
 
   # GET /links
   # GET /links.json
@@ -76,7 +77,6 @@ class LinksController < ApplicationController
     @link.downvote_by current_user
     redirect_to :back    
   end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

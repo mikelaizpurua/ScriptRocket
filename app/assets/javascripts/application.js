@@ -15,3 +15,37 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).on('ready page:load', ready);
+
+
+var ready = function() {
+    console.log("document is ready!");
+
+    $('#jsModalButton').click(function(){
+        console.log("Button clicked!");
+        $('#myModal').modal()
+    });
+
+    $('#jsdropdownmenu').click(function(){
+        console.log('dropdown button clicked');
+        $('.dropdown-menu').toggle('dropdown')
+    });
+}
+
+$(document).on('ready page:load', function() {
+    $(".player").mb_YTPlayer();
+});
+
+
+$(document).ready(function(){
+  $(document).mousemove(function(e){
+     TweenLite.to($('#signinbody'), 
+        .5, 
+        { css: 
+            {
+                backgroundPosition: ""+ parseInt(event.pageX/8) + "px "+parseInt(event.pageY/'12')+"px, "+parseInt(event.pageX/'15')+"px "+parseInt(event.pageY/'15')+"px, "+parseInt(event.pageX/'30')+"px "+parseInt(event.pageY/'30')+"px"
+            }
+        });
+  });
+});

@@ -1,10 +1,8 @@
 <!-- This code block is for the MAIN Script list aka the home page -->
 <!-- We are currently running into issues with displaying title and functional link (11/5/15 @ 9am ET) -->
 
-
+<div class="container">
 <% @links.each do |link| %>
-
-
 
 <div class="link" display="inblock">
   <h2>
@@ -12,7 +10,7 @@
     <%= link_to link.title, link %><br>
   </h2>
     <h4><div>Written by</div><%= link.written_by %></h4>
-    <h5><div><strong>Plot:</strong></div><%= link.plot_description %></h5>
+    <h5><div><strong>Plot:</strong><i></div><%= link.plot_description %></h5></i>
     <h6><div><strong>Estimated Budget:</strong></div><%= link.estimated_budget %></h6>
     <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small>
   
@@ -38,4 +36,5 @@
   </div>
 
   <% end %>
+</div>
 
