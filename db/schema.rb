@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108193417) do
+ActiveRecord::Schema.define(version: 20151108195141) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "link_id"
@@ -60,8 +60,12 @@ ActiveRecord::Schema.define(version: 20151108193417) do
     t.boolean  "romantic_comedy"
     t.boolean  "musical"
     t.boolean  "documentary"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "profile_image_file_name"
+    t.string   "profile_image_content_type"
+    t.integer  "profile_image_file_size"
+    t.datetime "profile_image_updated_at"
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
