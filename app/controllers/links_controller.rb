@@ -2,7 +2,7 @@ class LinksController < ApplicationController
   before_action :set_link, only: [:show, :edit, :update, :destroy]
   before_action :link_params, only: [:create]
   before_filter :authenticate_user!, except: [:index, :show]
-  
+
 
   # GET /links
   # GET /links.json
@@ -13,7 +13,7 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
-    
+
   end
 
   # GET /links/new
@@ -75,7 +75,7 @@ class LinksController < ApplicationController
   def downvote
     @link = Link.find(params[:id])
     @link.downvote_by current_user
-    redirect_to :back    
+    redirect_to :back
   end
 
   private
