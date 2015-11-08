@@ -1,12 +1,11 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :update, :destroy]
+  before_action :set_profile, only: [:show, :edit, :update, :destroy]
   before_action :profile_params, only: [:create]
 
   def index
   end
 
   def show
-    @profile = Profile.find(set_profile)
   end
 
   def new
@@ -14,7 +13,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-    @profile = current_user.profile
+
   end
 
   def create
