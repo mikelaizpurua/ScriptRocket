@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   get 'pages/home'
 
   resources :scripts
-  resources :scripts
   resources :comments
   devise_for :users
+  get 'tags/:tag', to: 'links#index', as: :tag
   resources :profiles
   resources :links do
     member do

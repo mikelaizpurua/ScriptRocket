@@ -40,6 +40,18 @@ header.navbar.navbar-inverse {
     margin: 0;
 }
 
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: black;
+}
+
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    color: black;
+}
+
 .navbar-default {
     background-color: #56A4B2;
     border-color: #56A4B2;
@@ -104,6 +116,15 @@ text-shadow: 1px 1px 1px #000;
     border-color: black;
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    background-color: rgba(154, 75, 214, 0.58);
+    border-color: #56A4B2;
+}
+
+a:visited {
+    color: white;
+}
 
 img {
     vertical-align: middle;
@@ -246,29 +267,31 @@ body {
   100% { transform: translate(-32px, 0); transform: translate(-32px, 0); }
 }
 
+
 #signinbody {
     background: url(http://mymaplist.com/img/parallax/back.png);
     background-color: #444;
     background-size: max-height;
-    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);
 }
 
 #splashbackground body {
     background: url(http://mymaplist.com/img/parallax/back.png);
     background-color: #444;
     background-size: max-height;
-    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);
 }
 
 .vertical-offset-100{
     padding-top:100px;
     padding-bottom: 400px;
 }
-    
+
 #signinbody .headinglogin h1 {
   color:white;
   text-align: center;
 }
+
   /*==========  Mobile First Method  ==========*/
 
     /* Custom, iPhone Retina */
