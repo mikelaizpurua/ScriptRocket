@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :links
   has_many :scripts
+
+  has_one :profile, dependent: :destroy
+  after_create :create_profile
 end
