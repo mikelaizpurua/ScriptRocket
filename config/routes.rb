@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :scripts
   resources :comments
   devise_for :users
+  resources :profiles
   resources :links do
     member do
       put "like",    to: "links#upvote"

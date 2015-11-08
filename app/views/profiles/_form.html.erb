@@ -1,0 +1,79 @@
+<div class ="container">
+<h1>Profile</h1>
+
+<%= form_for @profile, html: { multipart: true } do |f| %>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+
+      <div class="form-group">
+        <%= f.label :profile_image %>
+        <%= f.file_field :profile_image, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :first_name, 'First Name' %><br>
+        <%= f.text_field :first_name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :last_name, 'Last Name' %><br>
+        <%= f.text_field :last_name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.radio_button :gender, 'male' %>
+        <%= f.label :gender, 'Male', :value => 'male' %><br>
+        <%= f.radio_button :gender, 'female' %>
+        <%= f.label :gender, 'Female', :value => 'female' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :birthdate %><br>
+        <%= f.date_field :birthdate, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :occupation %><br>
+        <%= f.text_field :occupation, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :city %><br>
+        <%= f.text_field :city, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :tagline, 'Tagline (i.e. Favorite Movie Quote)' %><br>
+        <%= f.text_area :tagline, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.check_box :genre_comedy, class: "form-control" %>
+        <%= f.label :genre_comedy, 'Comedy'%>
+        <%= f.check_box :genre_adventure, class: "form-control" %>
+        <%= f.label :genre_adventure, 'Adventure'%>
+        <%= f.check_box :genre_drama, class: "form-control" %>
+        <%= f.label :genre_drama, 'Drama'%>
+        <%= f.check_box :genre_action, class: "form-control" %>
+        <%= f.label :genre_action, 'Action'%>
+        <%= f.check_box :genre_thriller, class: "form-control" %>
+        <%= f.label :genre_thriller, 'Thriller'%>
+        <%= f.check_box :genre_horror, class: "form-control" %>
+        <%= f.label :genre_horror, 'Horror'%>
+        <%= f.check_box :genre_romantic_comedy, class: "form-control" %>
+        <%= f.label :genre_romantic_comedy, 'Romantic Comedy'%>
+        <%= f.check_box :genre_musical, class: "form-control" %>
+        <%= f.label :genre_musical, 'Musical'%>
+        <%= f.check_box :genre_documentary, class: "form-control" %>
+        <%= f.label :genre_documentary, 'Documentary'%>
+      </div>
+
+      <div class="form-group">
+        <%= f.submit "Update", class: "btn btn-lg btn-primary" %>
+      </div>
+
+    </div>
+  </div>
+<% end %>
+</div>
