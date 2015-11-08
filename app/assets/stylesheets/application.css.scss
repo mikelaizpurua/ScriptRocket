@@ -242,7 +242,29 @@ body {
   100% { transform: translate(-32px, 0); transform: translate(-32px, 0); }
 }
 
+#signinbody {
+    background: url(http://mymaplist.com/img/parallax/back.png);
+    background-color: #444;
+    background-size: max-height;
+    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+}
+
+#splashbackground body {
+    background: url(http://mymaplist.com/img/parallax/back.png);
+    background-color: #444;
+    background-size: max-height;
+    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+}
+
+.vertical-offset-100{
+    padding-top:100px;
+    padding-bottom: 400px;
+}
     
+#signinbody .headinglogin h1 {
+  color:white;
+  text-align: center;
+}
   /*==========  Mobile First Method  ==========*/
 
     /* Custom, iPhone Retina */
