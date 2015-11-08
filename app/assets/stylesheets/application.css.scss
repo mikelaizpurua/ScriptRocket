@@ -36,6 +36,18 @@ header.navbar.navbar-inverse {
     margin: 0;
 }
 
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: black;
+}
+
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    color: black;
+}
+
 .navbar-default {
     background-color: #56A4B2;
     border-color: #56A4B2;
@@ -251,7 +263,7 @@ body {
   100% { transform: translate(-32px, 0); transform: translate(-32px, 0); }
 }
 
-    
+
   /*==========  Mobile First Method  ==========*/
 
     /* Custom, iPhone Retina */
