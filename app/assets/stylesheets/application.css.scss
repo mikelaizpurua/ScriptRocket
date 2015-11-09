@@ -40,6 +40,11 @@ header.navbar.navbar-inverse {
     margin: 0;
 }
 
+.navbar-inverse {
+    background-color: #222;
+    border-color: #090909;
+}
+
 .btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
@@ -63,6 +68,12 @@ background-color: rgba(71, 71, 71, 0.59);
 min-height: 796px;
 /* Incase of overlay problems just increase the min-height*/
 }
+
+header.navbar.navbar-inverse {
+    padding: 10;
+    margin: 0;
+}
+
 .video-section h1, .video-section h3{
 text-align:center;
 color:#fff;
@@ -298,8 +309,7 @@ button, input, optgroup, select, textarea {
 
 
 .panel-default > .panel-heading {
-    color: black;
-    background-color: #99AFB2;
+
 }
 
 .panel-transparent {
@@ -313,6 +323,12 @@ button, input, optgroup, select, textarea {
 .panel-transparent .panel-body{
     background: rgba(46, 51, 56, 0.2)!important;
 }
+
+.panel-primary {
+    border-color: rgba(46, 51, 56, 0.2);
+}
+
+
 
   /*==========  Mobile First Method  ==========*/
 
