@@ -1,24 +1,25 @@
 <div class="container">
-<!--Script title -->
-<div class="page-header">
-  <h1><a href="<%= @link.url %>"><%= @link.title %></a><br> <small>Submitted by <%= @link.written_by %></small></h1>
-  <h4><div>Written by</div><%= @link.written_by %></h4>
-  <h5><div><strong>Plot:</strong><i></div><%= @link.plot_description %></h5></i>
-  <h6><div><strong>Estimated Budget:</strong></div><%= @link.estimated_budget %></h6>
+
+  <div class="page-header">
+    <h1><%= @profile.first_name %> <%= @profile.last_name %></h1>
+    <h4><%= @profile.occupation %></h4>
+    <h5><%= @profile.city %></h5>
+    <h6><<%= @profile.gender %></h6>
+  </div>
+
 </div>
 
 
-<!--Script Image -->
-<div class="script">
-	<%= image_tag @link.image.url(:medium) %>
+<!-- <div class="script">
+	<%= image_tag @profile.image.url(:medium) %>
 </div>
 
-<!--Visit URL button -->
+
 <div class="btn-group">
 	<%= link_to 'Read Script', @link.url, class: "btn btn-primary" %>
 </div>
 
-<!--If user is the CURRENT user give them the option to edit or destory their post -->
+
 <% if @link.user == current_user -%>
 	<div class="btn-group">
 		<%= link_to 'Edit Script', edit_link_path(@link), class: "btn btn-default" %>
@@ -26,7 +27,7 @@
 	</div>
 <% end %>
 
-<!--Upvote and Down vote buttons -->
+
 <div class="btn-group pull-right">
 	<%= link_to like_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
 	<span class="glyphicon glyphicon-chevron-up"></span>
@@ -40,7 +41,7 @@
 		<% end %>
 </div>
 
-<!--This is the comment section where users can commment on the script -->
+
 <h3 class="comments_title">
 	<%= @link.comments.count %> Comments
 </h3>
@@ -59,5 +60,5 @@
 	<%= f.submit "Add Comment", class: "btn btn-primary" %>
 	<% end %>
 <% end -%>
+
 </div>
-<!--End of comment section -->
