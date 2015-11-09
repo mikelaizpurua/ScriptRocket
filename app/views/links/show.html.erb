@@ -64,7 +64,7 @@
 <% end -%>
 
 <div>
-<% @link.tags.any? %>
+  <% @link.tags.any? %>
   <% @link.tags.each do |tag| %>
   <%= link_to tag.name, tag_path(tag) %>
 
