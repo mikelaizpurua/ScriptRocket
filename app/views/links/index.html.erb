@@ -9,7 +9,7 @@
     <td><%= image_tag link.image.url(:medium) %></td>
     <%= link_to link.title, link %><br>
   </h2>
-    <h4><div>Written by</div><%= link.written_by %></h4>
+    <h4><div>Submitted by</div><%= link.user %></h4>
     <h4><div>Written by</div><%= link.written_by %></h4>
     <h5><div><strong>Plot:</strong><i></div><%= link.plot_description %></h5></i>
     <h6><div><strong>Estimated Budget:</strong></div><%= link.estimated_budget %></h6>
@@ -43,4 +43,3 @@
 
   <% end %>
 </div>
-
