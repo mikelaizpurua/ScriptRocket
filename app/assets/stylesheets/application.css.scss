@@ -40,6 +40,18 @@ header.navbar.navbar-inverse {
     margin: 0;
 }
 
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: black;
+}
+
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    color: black;
+}
+
 .navbar-default {
     background-color: #56A4B2;
     border-color: #56A4B2;
@@ -77,6 +89,8 @@ color:#fff;
     opacity: 0.5;
 }
 
+
+
 .video-section h1{
 font-size: 50px;
 font-family: 'Buenard', serif;
@@ -104,7 +118,12 @@ text-shadow: 1px 1px 1px #000;
     border-color: black;
 }
 
-
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    background-color: rgba(154, 75, 214, 0.58);
+    border-color: #56A4B2;
+}
+  
 img {
     vertical-align: middle;
     border: solid;
@@ -246,29 +265,55 @@ body {
   100% { transform: translate(-32px, 0); transform: translate(-32px, 0); }
 }
 
+
 #signinbody {
-    background: url(http://mymaplist.com/img/parallax/back.png);
+    background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);
     background-color: #444;
     background-size: max-height;
-    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+    background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png),url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png),url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);
 }
 
 #splashbackground body {
     background: url(http://mymaplist.com/img/parallax/back.png);
     background-color: #444;
     background-size: max-height;
-    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+    background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png),url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png),url(http://mymaplist.com/img/parallax/back.png);
 }
 
 .vertical-offset-100{
     padding-top:100px;
     padding-bottom: 400px;
 }
-    
+
 #signinbody .headinglogin h1 {
   color:white;
   text-align: center;
 }
+
+button, input, optgroup, select, textarea {
+    color: black;
+    font: inherit;
+    margin: 0;
+}
+
+
+.panel-default > .panel-heading {
+    color: black;
+    background-color: #99AFB2;
+}
+
+.panel-transparent {
+    background: none;
+}
+
+.panel-transparent .panel-heading{
+    background: rgba(122, 130, 136, 0.2)!important;
+}
+
+.panel-transparent .panel-body{
+    background: rgba(46, 51, 56, 0.2)!important;
+}
+
   /*==========  Mobile First Method  ==========*/
 
     /* Custom, iPhone Retina */

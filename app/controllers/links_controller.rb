@@ -13,7 +13,6 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
-
   end
 
   # GET /links/new
@@ -86,6 +85,6 @@ class LinksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
-      params.require(:link).permit(:title, :url, :description, :image, :written_by, :plot_description, :estimated_budget)
+      params.require(:link).permit(:title, :url, :description, :image, :written_by, :plot_description, :estimated_budget, :tag_list)
     end
 end
