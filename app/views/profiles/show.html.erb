@@ -12,7 +12,11 @@
       </div>
     </div>
     <div class="col-md-3">
+      <% if @profile.gender != nil %>
       <h4>Gender: <%= @profile.gender.capitalize %></h4>
+      <% else %>
+      <h4>Gender: <%= @profile.gender %></h4>
+      <% end %>
       <h4>DOB: <%= @profile.birthdate %></h4>
       <h4>Favorite Movie Types:</h4>
       <div class="text-left">
