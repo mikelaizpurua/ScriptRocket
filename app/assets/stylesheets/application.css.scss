@@ -159,7 +159,11 @@ body {
 .title a {
       color: #FF4500;
     }
-//
+
+a:visited {
+    color: purple;
+}
+
 .comments_title {
     margin-top: 2em;
 }

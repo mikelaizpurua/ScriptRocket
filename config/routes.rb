@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :users
   get 'tags/:tag', to: 'links#index', as: :tag
   resources :profiles
+
   resources :links do
     member do
       put "like",    to: "links#upvote"
