@@ -21,6 +21,10 @@ h1, h2, h3, h4, h5, h6{
              0px 18px 23px rgba(0,0,0,0.1);
 }
 
+a:visited {
+    color: #fff;
+}
+
 p{
   color:#FFF;
   text-align:center;
@@ -81,7 +85,7 @@ a {
   opacity:0.8;
   letter-spacing:1px;
   text-decoration:none;
-  box-shadow:#c0392b 0px 7px 2px,#000 0px 8px 5px;
+  box-shadow:#389EB2 0px 7px 2px,#000 0px 8px 5px;
 }
 
 a:hover{
