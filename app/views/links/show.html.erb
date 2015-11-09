@@ -1,10 +1,10 @@
 <!-- When you click on a script from the homepage, this is the page you are taken too -->
 <!-- This section includes headers,script images, upvote/downvote likes -->
-
-<div class="container">
+<div class="overlay">
+<div class="container" id="mainindexbody">
 <!--Script title -->
 <div class="page-header">
-  <h1><a href="<%= @link.url %>"><%= @link.title %></a><br> <small>Submitted by <%= @link.written_by %></small></h1>
+  <h1><a href="<%= @link.url %>"><%= @link.title %></a><br><br> <small>Submitted by <%= @link.written_by %></small></h1>
   <h4><div>Written by</div><%= @link.written_by %></h4>
   <h5><div><strong>Plot:</strong><i></div><%= @link.plot_description %></h5></i>
   <h6><div><strong>Estimated Budget:</strong></div><%= @link.estimated_budget %></h6>
@@ -15,6 +15,8 @@
 <div class="script">
 	<%= image_tag @link.image.url(:medium) %>
 </div>
+
+<br>
 
 <!--Visit URL button -->
 <div class="btn-group">
@@ -43,6 +45,15 @@
 		<% end %>
 </div>
 
+<!-- This Section represents the TAGS for a script -->
+<br><br><br>
+  <% @link.tags.any? %>
+  <% @link.tags.each do |tag| %>
+  <%= link_to tag.name, tag_path(tag) %>
+<% end %>
+<!-- End of TAGS section -->
+
+
 <!--This is the comment section where users can commment on the script -->
 <h3 class="comments_title">
 	<%= @link.comments.count %> Comments
@@ -64,16 +75,8 @@
 <% end -%>
 
 <div>
-  <% @link.tags.any? %>
-  <% @link.tags.each do |tag| %>
-  <%= link_to tag.name, tag_path(tag) %>
 
-<% end %>
-<%#@link.tags.any? %>
-  <%# @link.tags.each do |tag| %>
-  <%#= link_to tag.name, tagged_url(:tag, tag.name) %>
-  <%#=  tag.name %>
-<%#end %>
+</div>
 </div>
 
 <!--End of comment section -->
