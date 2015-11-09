@@ -1,2 +1,15 @@
-<h1>Hello</h1>
-<p>test</p>
+<div class="container">
+
+  <div class="page-header">
+    <h1><%= @profile.first_name %> <%= @profile.last_name %></h1>
+    <h4><%= @profile.occupation %></h4>
+    <h5><%= @profile.city %></h5>
+    <h6><<%= @profile.gender %></h6>
+  </div>
+
+  <!--Profile Image -->
+  <div class="profile">
+  	<%= image_tag @profile.profile_image.url(:medium) %>
+  </div>
+
+</div>

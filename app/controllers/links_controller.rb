@@ -8,11 +8,17 @@ class LinksController < ApplicationController
   # GET /links.json
   def index
     @links = Link.all
+    if params[:tag]
+       @links = Link.tagged_with(params[:tag])
+     else
+       @links = Link.all
+    end
   end
 
   # GET /links/1
   # GET /links/1.json
   def show
+    @link = Link.find(params[:id])
   end
 
   # GET /links/new
@@ -22,6 +28,7 @@ class LinksController < ApplicationController
 
   # GET /links/1/edit
   def edit
+
   end
 
   # POST /links
