@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
   before_action :profile_params, only: [:create]
+  # :show,
 
   def index
   end
@@ -13,21 +14,11 @@ class ProfilesController < ApplicationController
   end
 
   def edit
-
   end
 
   def create
     @profile = Profile.new(profile_params)
-
-    respond_to do |format|
-      if @profile.save
-        # format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
-        # format.json { render :show, status: :created, location: @profile }
-      else
-        format.html { render :new }
-        format.json { render json: @profile.errors, status: :unprocessable_entity }
-      end
-    end
+    @profile.save
   end
 
   def update
@@ -54,6 +45,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:first_name, :last_name, :gender, :iprofile_image, :birthdate, :occupation, :city, :comedy, :adventure, :drama, :action, :thriller, :horror, :romantic_comedy, :musical, :documentary)
+      params.require(:profile).permit(:first_name, :last_name, :gender, :profile_image, :birthdate, :occupation, :city, :comedy, :adventure, :drama, :action, :thriller, :horror, :romantic_comedy, :musical, :documentary)
     end
 end
