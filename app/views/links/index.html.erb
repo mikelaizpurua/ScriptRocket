@@ -1,5 +1,6 @@
 <!-- This code block is for the MAIN Script list aka the home page -->
 <!-- We are currently running into issues with displaying title and functional link (11/5/15 @ 9am ET) -->
+<div class="overlay">
 
 <div class="container" id="mainindexbody">
 <% @links.each do |link| %>
@@ -9,7 +10,7 @@
     <td><%= image_tag link.image.url(:medium) %></td>
     <%= link_to link.title, link %><br>
   </h2>
-    <h4><div>Submitted by</div><%= link.user.profile.first_name %></h4>
+    <h4><div>Submitted by</div><%= link.user %></h4>
     <h4><div>Written by</div><%= link.written_by %></h4>
     <h5><div><strong>Plot:</strong><i></div><%= link.plot_description %></h5></i>
     <h6><div><strong>Estimated Budget:</strong></div><%= link.estimated_budget %></h6>
@@ -42,5 +43,6 @@
   </div>
 
   <% end %>
-</div>
 
+</div>
+</div>
