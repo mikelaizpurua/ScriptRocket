@@ -72,7 +72,8 @@ a {
   background:#e74c3c;
   color:#FFF;
   position:relative;
-  padding:15px;
+  padding:10px;
+  margin-bottom: 10px;
   font-weight:900 !important;
   text-transform:uppercase;
   border-radius:5px;
