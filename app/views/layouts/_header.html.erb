@@ -20,7 +20,6 @@
               <li><%= link_to 'Script List', links_path %></li>
               <li><%= link_to 'Submit Script', new_link_path %></li>
               <li><%= link_to 'Profile', profile_path(current_user.profile) %></li>
-              <li><%= link_to 'Account', edit_user_registration_path %></li>
               <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
             </ul>
           <% else -%>

@@ -1,15 +1,61 @@
-<div class="container">
-
-  <div class="page-header">
-    <h1><%= @profile.first_name %> <%= @profile.last_name %></h1>
-    <h4><%= @profile.occupation %></h4>
-    <h5><%= @profile.city %></h5>
-    <h6><<%= @profile.gender %></h6>
+<div class="container-fluid">
+  <div class="row spacer"></div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="profile">
+      	<%= image_tag @profile.profile_image.url(:medium) %>
+      </div>
+      <div class="description">
+        <h1><%= @profile.first_name %> <%= @profile.last_name %></h1>
+        <h4><%= @profile.occupation %></h4>
+        <h5><%= @profile.city %></h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <h4>Gender: <%= @profile.gender.capitalize %></h4>
+      <h4>DOB: <%= @profile.birthdate %></h4>
+      <h4>Favorite Movie Types:</h4>
+      <div class="text-left">
+      <% if @profile.comedy %>
+      <div>Comedy</div>
+      <% end %>
+      <% if @profile.adventure %>
+      <div>Adventure</div>
+      <% end %>
+      <% if @profile.drama %>
+      <div>Drama</div>
+      <% end %>
+      <% if @profile.thriller %>
+      <div>Thriller</div>
+      <% end %>
+      <% if @profile.horror %>
+      <div>Horror</div>
+      <% end %>
+      <% if @profile.romantic_comedy %>
+      <div>Romantic Comedy</div>
+      <% end %>
+      <% if @profile.musical %>
+      <div>Musical</div>
+      <% end %>
+      <% if @profile.documentary %>
+      <div>Documentary</div>
+      <% end %>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <ul>
+        <li><%= link_to 'Edit Profile', edit_profile_path %></li>
+        <li><%= link_to 'Cancel Account?', edit_user_registration_path %></li>
+      </ul>
+    </div>
+    <div class="col-md-3">
+      <h3>Currently Reading</h3>
+      <h3>My Starred Scripts</h3>
+      <h3>Read Later Scripts</h3>
+    </div>
   </div>
-
-  <!--Profile Image -->
-  <div class="profile">
-  	<%= image_tag @profile.profile_image.url(:medium) %>
-  </div>
-
 </div>
+
+<!-- <button type="button" class="btn btn-default">
+  <span class="glyphicon glyphicon-heart" aria-hidden="true"></span><span> Edit Profile</span>
+</button> -->
