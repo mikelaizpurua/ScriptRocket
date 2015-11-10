@@ -1,9 +1,16 @@
 <!-- This code block is for the MAIN Script list aka the home page -->
 <!-- We are currently running into issues with displaying title and functional link (11/5/15 @ 9am ET) -->
+
 <div class="overlay">
 
 <div class="container" id="mainindexbody">
 <% @links.each do |link| %>
+
+<div id="tag_cloud">
+  <%= tag_cloud Link.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
+</div>
 
 <div class="link" display="inblock">
   <h2>
