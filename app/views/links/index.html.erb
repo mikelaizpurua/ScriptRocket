@@ -7,14 +7,14 @@
 <% @links.each do |link| %>
 
 <!-- PDFreader set up to be used in the rest of the document -->
-<%# url = open(link.url) %>
-<%# reader = PDF::Reader.new(url) %>
+<% url = open(link.url) %>
+<% reader = PDF::Reader.new(url) %>
 <!-- Do not remove -->
 
 <!-- <div id="tag_cloud">
-  <%=# tag_cloud Link.tag_counts, %w[s m l] do |tag, css_class| %>
-    <%=# link_to tag.name, tag_path(tag.name), class: css_class %>
-  <%# end %>
+  <%= tag_cloud Link.tag_counts, %w[s m l] do |tag, css_class| %>
+    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+  <% end %>
 </div>
 
  -->
