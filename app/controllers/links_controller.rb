@@ -3,6 +3,7 @@ class LinksController < ApplicationController
   before_action :link_params, only: [:create]
   before_filter :authenticate_user!, except: [:index, :show]
 
+  require 'open-uri'
 
   # GET /links
   # GET /links.json

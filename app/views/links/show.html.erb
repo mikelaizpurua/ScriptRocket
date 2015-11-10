@@ -2,12 +2,19 @@
 <!-- This section includes headers,script images, upvote/downvote likes -->
 <div class="overlay">
 <div class="container" id="mainindexbody">
+
+<!-- PDFreader set up to be used in the rest of the document -->
+<% url = open(@link.url) %>
+<% reader = PDF::Reader.new(url) %>
+<!-- Do not remove -->
+
 <!--Script title -->
 <div class="page-header">
-  <h1><a href="<%= @link.url %>"><%= @link.title %></a><br><br> <small>Submitted by <%= @link.written_by %></small></h1>
-  <h4><div>Written by</div><%= @link.written_by %></h4>
-  <h5><div><strong>Plot:</strong><i></div><%= @link.plot_description %></h5></i>
-  <h6><div><strong>Estimated Budget:</strong></div><%= @link.estimated_budget %></h6>
+    <h1><a href="<%= @link.url %>"><%= @link.title %></a><br><br> <small>Submitted by <%= @link.written_by %></small></h1>
+    <h4><div>Written by</div><%= @link.written_by %></h4>
+    <h5><div><strong>Plot:</strong><i></div><%= @link.plot_description %></h5></i>
+    <h6><div><strong>Estimated Budget:</strong></div><%= @link.estimated_budget %></h6>
+    <h6><div>Page Count: <%= reader.page_count %></div></h6>
 </div>
 
 

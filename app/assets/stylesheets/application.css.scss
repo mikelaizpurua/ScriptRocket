@@ -21,7 +21,6 @@
     position: relative;
 }
 
-
 .content-section .video-section{
     max-height: 0px;
     padding: 0 0 0px;
@@ -34,6 +33,11 @@
 #main_content #content {
     float: none;
     padding-bottom: 0px;
+}
+
+#tag_cloud {
+    width: 600px;
+    line-height: 1.6em;
 }
 
 header.navbar.navbar-inverse {
@@ -92,6 +96,7 @@ color:#fff;
     margin-left: 10px;
     position: relative;
 }
+
 
 #mainpagebuttons {
     text-align: center;
