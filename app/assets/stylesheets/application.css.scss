@@ -41,6 +41,13 @@ header.navbar.navbar-inverse {
     margin: 0;
 }
 
+.link #profilepicmain img {
+  border-radius: 50%;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+}
+
 .navbar-inverse {
     background-color: #222;
     border-color: #090909;
@@ -136,9 +143,31 @@ text-shadow: 1px 1px 1px #000;
     border-color: #56A4B2;
 }
 
-img {
+#coverimage {
     vertical-align: middle;
     border: solid;
+    margin-left: 800px;
+    margin-bottom: 30px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+#coverimage img {
+    width: 325px;
+    height: 500px;
+}
+
+#plotdescription {
+  width: 700px;
+}
+
+#titlebutton {
+  margin-bottom: 30px;
+}
+
+#scriptinfo {
+  border: dashed yellow;
 }
 
 body {
