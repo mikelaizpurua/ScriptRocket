@@ -20,7 +20,7 @@
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to 'Script List', links_path %></li>
               <li><%= link_to 'Submit Script', new_link_path %></li>
-              <% if current_user.profile.first_name == nil %>
+              <% if current_user && current_user.profile.first_name == nil %>
               <li><%= link_to 'Profile', edit_profile_path(current_user.profile) %></li>
               <% else %>
               <li><%= link_to 'Profile', profile_path(current_user.profile) %></li>
