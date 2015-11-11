@@ -16,14 +16,16 @@
         <div id="logo" class="navbar-brand" class="navbar-brand" href="#"><%= link_to "WebbyWood", root_path %></div>
 
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
-          <% if user_signed_in? -%>
+          <% if current_user %>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to 'Script List', links_path %></li>
               <li><%= link_to 'Submit Script', new_link_path %></li>
-              <% if current_user && current_user.profile.first_name == nil %>
-              <li><%= link_to 'Profile', edit_profile_path(current_user.profile) %></li>
+              <% unless current_user.profile.first_name.nil? %>
+                   <li><%= link_to 'Profile', edit_profile_path(current_user.profile) %></li>
+              <% elsif current_user.profile %>
+                   <li><%= link_to 'Profile', profile_path(current_user.profile) %></li>
               <% else %>
-              <li><%= link_to 'Profile', profile_path(current_user.profile) %></li>
+                <%= link_to new_profile_path %>
               <% end %>
               <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
             </ul>
