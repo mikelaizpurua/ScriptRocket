@@ -21,6 +21,12 @@
     <h4><div class="col-md-6">Favorite Movie Types:</div></h4>
     </div>
 
+    <br><br><br>
+    <% @profile.tags.any? %>
+    <% @profile.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+    <% end %>
+
     <div class="row">
         <div class="col-md-6"><% if @profile.comedy %>
       <div>Comedy</div>
@@ -58,7 +64,7 @@
       <h4>DOB: </h4>
       <h4></h4>
       <div class="text-left">
-      
+
       </div>
     </div>
 
