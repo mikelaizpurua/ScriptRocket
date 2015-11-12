@@ -27,7 +27,7 @@
         <figure>
               <div id="profilepicmain"><%= image_tag link.user.profile.profile_image.url(:medium) %></div>
             <figcaption>
-                <h2><%= current_user.profile.first_name + " " + current_user.profile.last_name %></h2>
+                <h2><%= link_to (current_user.profile.first_name + " " + current_user.profile.last_name), profile_path(current_user.profile.id) %></h2>
             </figcaption>
         </figure>
     </li>
