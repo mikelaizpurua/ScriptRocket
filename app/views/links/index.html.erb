@@ -48,7 +48,7 @@
     <p>Tags: <%= raw link.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 
    <div class="btn-group">
-    <a class="btn btn-default btn-sm" href="<%= link.url %>">
+    <a class="btn btn-default btn-sm" href="<%= link.url %>" target="_blank">
       View Script
     </a>
 

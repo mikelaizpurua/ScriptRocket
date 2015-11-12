@@ -4,6 +4,12 @@ class ProfilesController < ApplicationController
   # :show,
 
   def index
+        @profiles = Profile.all
+    if params[:tag]
+       @profiles = Profile.tagged_with(params[:tag])
+     else
+       @profiles = Profile.all
+    end
   end
 
   def show
@@ -46,7 +52,7 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:first_name, :last_name, :gender, :profile_image, :birthdate, :occupation, :city, :comedy, :adventure, :drama, :action, :thriller, :horror, :romantic_comedy, :musical, :documentary)
+      params.require(:profile).permit(:first_name, :last_name, :gender, :profile_image, :birthdate, :occupation, :city, :comedy, :adventure, :drama, :action, :thriller, :horror, :romantic_comedy, :musical, :documentary, :tag_list)
     end
 
     #default set of params for the empty profile before being filled.
