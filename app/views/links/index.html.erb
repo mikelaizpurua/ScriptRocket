@@ -16,10 +16,27 @@
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
   <% end %>
 </div>
-
  -->
+
+
 <div class="link" display="inblock">
-  <div id="profilepicmain"><%= image_tag link.user.profile.profile_image.url(:medium) %></div>
+
+<!--THIS SECTION IS FOR PROFILE PICTURE THAT SPINS TO DATA -->
+  <ul class="demo-3">
+    <li>
+        <figure>
+              <div id="profilepicmain"><%= image_tag link.user.profile.profile_image.url(:medium) %></div>
+            <figcaption>
+                <h2><%= link.written_by %></h2>
+                <p>link.user.profile</p>
+            </figcaption>
+        </figure>
+    </li>
+</ul>
+<!--THIS SECTION IS THE END FOR PROFILE PICTURE THAT SPINS TO DATA -->
+
+
+<!--THIS SECTION IS FOR THE BODY OF SCRIPT INFO ON THE MAIN PAGE -->
   <div id="coverimage"> <td><%= image_tag link.image.url(:medium) %></td> </div>
   <br>
     <h4><div>Written by</div><%= link.written_by %></h4>
@@ -48,11 +65,9 @@
       <%= link.get_downvotes.size %>
     <% end %>
   </div>
-
   </div>
 </div>
-
   <% end %>
-
 </div>
 </div>
+<!--THIS SECTION IS THE END FOR THE BODY OF SCRIPT INFO ON THE MAIN PAGE -->

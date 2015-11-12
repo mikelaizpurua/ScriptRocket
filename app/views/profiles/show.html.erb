@@ -1,20 +1,27 @@
+<div class="overlay">
 <div class="container">
+  <br>
+  <br>
+  <br>
     <div class="row" id="profilepic">
         <div class="col-md-3"><%= image_tag @profile.profile_image.url(:medium) %></div>
+            <div class="col-md-3">
+    <li><%= link_to 'Edit Profile', edit_profile_path %></li>
+    <br>
+    <br>
+    <li><%= link_to 'Cancel Account?', edit_user_registration_path %></li></div>
+    </div>
     </div>
     <div class="row">
-        <div class="col-md-3" id="profilename"><%= @profile.first_name %> <%= @profile.last_name %></div>
-        <div class="col-md-3" id="profileoccup"><%= @profile.occupation %></div>
-        <div class="col-md-3" id="profilecity"><%= @profile.city %></div>
-        <div class="col-md-3"><%= @profile.gender.capitalize %></div>
-        <div class="col-md-3"><%= @profile.birthdate %></div>
-        <div class="col-md-3">        <li><%= link_to 'Edit Profile', edit_profile_path %></li>
-        <li><%= link_to 'Cancel Account?', edit_user_registration_path %></li></div>
-        <div class="col-md-3"></div>
-        <div class="col-md-3"></div>
+    <h4><div class="col-md-3" id="profilename"><%= @profile.first_name %> <%= @profile.last_name %></div></h4>
+    <h4><div class="col-md-3" id="profileoccup"><%= @profile.occupation %></div></h4>
+    <h4><div class="col-md-3" id="profilecity"><%= @profile.city %></div></h4>
+    <h4><div class="col-md-3"><%= @profile.gender.capitalize %></div></h4>
+    <h4><div class="col-md-3"><%= @profile.birthdate %></div></h4>
+    <h4><div class="col-md-6">Favorite Movie Types:</div></h4>
     </div>
+
     <div class="row">
-        <div class="col-md-6">Favorite Movie Types:</div>
         <div class="col-md-6"><% if @profile.comedy %>
       <div>Comedy</div>
       <% end %>
@@ -40,12 +47,9 @@
       <div>Documentary</div>
       <% end %></div>
     </div>
+
     <div class="row"></div>
-</div>
-
-
-
-    <div class="col-md-3">
+        <div class="col-md-3">
       <% if @profile.gender != nil %>
       <h4>Gender: </h4>
       <% else %>
@@ -57,19 +61,19 @@
       
       </div>
     </div>
-    <div class="col-md-3">
-      <ul>
 
-      </ul>
-    </div>
     <div class="col-md-3">
-      <h3>Currently Reading</h3>
-      <h3>My Starred Scripts</h3>
-      <h3>Read Later Scripts</h3>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
     </div>
   </div>
 </div>
-
+</div>
+</div>
 <!-- <button type="button" class="btn btn-default">
   <span class="glyphicon glyphicon-heart" aria-hidden="true"></span><span> Edit Profile</span>
 </button> -->
