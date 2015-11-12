@@ -27,7 +27,7 @@
     <h6><div><strong>Estimated Budget:</strong></div><%= link.estimated_budget %></h6>
     <h6><div>Page Count: <%= reader.page_count %></div></h6>
     <div id ="titlebutton"><h2><%= link_to link.title, link %><br></h2></div>
-    <h6><small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.email %></small></h6>
+    <h6><small class="author">Submitted <%= time_ago_in_words(link.created_at) %> ago by <%= link.user.email %></small></h6>
     <p>Tags: <%= raw link.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
 
    <div class="btn-group">
