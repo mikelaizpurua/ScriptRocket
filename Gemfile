@@ -11,7 +11,6 @@ gem 'masonry-rails'
 gem 'simple_form'
 gem 'turbolinks'
 gem 'bootstrap-sass'
-gem 'rails_12factor'
 gem 'paperclip'
 gem 'devise'
 gem 'acts_as_votable'
@@ -22,6 +21,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   gem 'byebug'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers', '~> 2.8'
   gem 'sqlite3'
   gem 'better_errors'
 end
