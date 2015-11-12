@@ -58,6 +58,11 @@
         <%= f.text_field :city, class: "form-control" %>
       </div>
 
+        <div class="form-group">
+          <%= f.label(:tag_list, "Favorite genres") %><br />
+          <%= f.text_field(:tag_list, value: @profile.tag_list.join(","))%>
+        </div>
+
       <!-- <div class="form-group">
         <%= f.check_box :comedy, class: "form-control" %>
         <%= f.label :comedy, 'Comedy'%>
