@@ -20,12 +20,10 @@
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to 'Script List', links_path %></li>
               <li><%= link_to 'Submit Script', new_link_path %></li>
-              <% if current_user.profile %>
+              <% if current_user.profile.first_name == nil %>
                    <li><%= link_to 'Profile', edit_profile_path(current_user.profile) %></li>
-              <%# elsif current_user.profile %>
-                   <!-- <li><%# link_to 'Profile', profile_path(current_user.profile) %></li> -->
               <% else %>
-                 <li><%= link_to 'New Profile', new_profile_path %></li>
+                 <li><%= link_to 'Profile', profile_path(current_user.profile) %></li>
               <% end %>
               <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
             </ul>

@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110210705) do
+ActiveRecord::Schema.define(version: 20151110201111) do
+
+  create_table "collections", force: :cascade do |t|
+    t.string   "script_title"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
   create_table "comments", force: :cascade do |t|
     t.integer  "link_id"
@@ -24,8 +30,29 @@ ActiveRecord::Schema.define(version: 20151110210705) do
   add_index "comments", ["link_id"], name: "index_comments_on_link_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
-# Could not dump table "links" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "link_collections", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string   "title"
+    t.string   "url"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "user_id"
+    t.string   "integer"
+    t.string   "script"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "written_by"
+    t.text     "plot_description"
+    t.string   "estimated_budget"
+  end
+
+  add_index "links", ["integer"], name: "index_links_on_integer"
 
   create_table "profiles", force: :cascade do |t|
     t.string   "first_name"
