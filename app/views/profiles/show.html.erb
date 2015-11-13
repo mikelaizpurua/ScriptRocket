@@ -13,14 +13,14 @@
     <h4><div id="profiletopic">Birthdate:</div> <%= @profile.birthdate %></h4>
     <br>
     <br>
-    <br>    
+    <br>
   </div>
 
 
     <div id="profilepic">
     <%= image_tag @profile.profile_image.url(:medium) %>
     </div>
-    
+
 
     <br><br><br>
     <h1><div id="profiletopic">Favorite Genres</div></h1>
@@ -30,15 +30,14 @@
     <%= link_to tag.name, tag_path(tag) %>
     <% end %>
 
-      <div id="profileButtons">
+    <% if current_user.profile.id.to_i == params[:id].to_i %>
+    <div id="profileButtons">
       <%= link_to 'Edit Profile', edit_profile_path %>
       <%= link_to 'Cancel Account?', edit_user_registration_path %>
       <br><br><br>
     </div>
+    <% end %>
 
-
-
-   
   <br>
   <br>
   <br>
