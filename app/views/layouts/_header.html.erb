@@ -1,5 +1,5 @@
 <!--This section represents our NAVBAR/HEADER used throughout our application -->
- 
+
 
  <header class="navbar navbar-inverse" role="navigation">
     <div class="navbar-inner">
@@ -11,23 +11,28 @@
     </button>
   </div>
 
+
       <div class="container">
-        <div id="logo" class="navbar-brand" class="navbar-brand" href="#"><%= link_to "WebbyWood", root_path %></div>
+        <div id="logo" class="navbar-brand" class="navbar-brand" href="#"><%= link_to "Script Rocket", root_path %></div>
 
         <nav class="collapse navbar-collapse navbar-ex1-collapse">
-          <% if user_signed_in? -%>
+          <% if current_user %>
             <ul class="nav navbar-nav navbar-right">
               <li><%= link_to 'Script List', links_path %></li>
               <li><%= link_to 'Submit Script', new_link_path %></li>
-              <li><%= link_to 'Account', edit_user_registration_path %></li>
+              <% if current_user.profile.first_name == nil %>
+                   <li><%= link_to 'Profile', edit_profile_path(current_user.profile) %></li>
+              <% else %>
+                 <li><%= link_to 'Profile', profile_path(current_user.profile) %></li>
+              <% end %>
               <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
             </ul>
-          <% else -%>
+          <% else %>
             <ul class="nav navbar-nav pull-right">
               <li><%= link_to 'Sign up', new_user_registration_path %></li>
               <li><%= link_to 'Sign in', new_user_session_path %></li>
             </ul>
-          <% end -%>
+          <% end %>
         </nav>
       </div>
     </div>
@@ -38,10 +43,7 @@
 
 
 <!--   <div id="main_content" class="container">
-    <% flash.each do |name, msg| %>
-      <%= content_tag(:div, msg, class: "alert alert-info") %>
-    <% end %>
-
-    </div> -->
-
-  </div>
+            <%#flash.each do |name, msg| %>
+            <%#=content_tag(:div, msg, class: "alert alert-info") %>
+            <%# end %>
+          </div> -->

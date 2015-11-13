@@ -1,0 +1,54 @@
+<div class="overlay">
+<div class="container">
+
+  <br>
+  <br>
+  <br>
+
+  <div id="profileInfoBlock">
+    <h4><div id="profiletopic">Name:</div><div id="profileanswer"><%= @profile.first_name %> <%= @profile.last_name %></div></h4>
+    <h4><div id="profiletopic">Occupation:</div> <div id="profileanswer"><%= @profile.occupation %></h4>
+    <h4><div id="profiletopic">Location:</div> <%= @profile.city %></h4>
+    <h4><div id="profiletopic">Gender:</div> <%= @profile.gender.capitalize %></h4>
+    <h4><div id="profiletopic">Birthdate:</div> <%= @profile.birthdate %></h4>
+    <br>
+    <br>
+    <br>
+  </div>
+
+
+    <div id="profilepic">
+    <%= image_tag @profile.profile_image.url(:medium) %>
+    </div>
+
+
+    <br><br><br><br>
+    <h1><div id="profiletopic">Favorite Genres</div></h1>
+    <br>
+    <% @profile.tags.any? %>
+    <% @profile.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag) %>
+    <% end %>
+
+    <% if current_user.profile.id.to_i == params[:id].to_i %>
+    <div id="profileButtons">
+      <%= link_to 'Edit Profile', edit_profile_path %>
+      <%= link_to 'Cancel Account?', edit_user_registration_path %>
+      <br>
+    </div>
+    <% end %>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+<!-- <button type="button" class="btn btn-default">
+  <span class="glyphicon glyphicon-heart" aria-hidden="true"></span><span> Edit Profile</span>
+</button> -->

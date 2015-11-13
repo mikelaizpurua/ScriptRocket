@@ -1,0 +1,94 @@
+
+<div class="overlay">
+<div class ="container">
+
+<%= form_for @profile, html: { multipart: true } do |f| %>
+  <div id="createprofileblock">
+    <br>
+    <h1>Create Your Profile</h1>
+    <h4>Let the world know you are the <strong>next big writer</strong>. The quickest way to have your content produced is putting yourself out there.</h4>
+    <br>
+    <img src="https://dl.dropboxusercontent.com/u/27576976/images/Webbysignup.png">
+    <br>
+    <br>
+    <h4>When you upload your script, your profile data will be linked to the post. Producers will be able to view your profile and contact information to contact your directly.</h4>
+  </div>
+        <div class="row vertical-offset-100">
+
+    <div class="col-md-4 col-md-offset-4"  id="buildprofileblock">
+    <div class="panel panel-primary panel-transparent">
+      <div class="panel-heading">
+        <h3 class="panel-title">Create Your Profile</h3>
+        <div class="panel-body">
+
+      <div class="form-group">
+        <%= f.label :profile_image %>
+        <%= f.file_field :profile_image, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :first_name, 'First Name' %><br>
+        <%= f.text_field :first_name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :last_name, 'Last Name' %><br>
+        <%= f.text_field :last_name, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.radio_button :gender, 'male' %>
+        <%= f.label :gender, 'Male', :value => 'male' %><br>
+        <%= f.radio_button :gender, 'female' %>
+        <%= f.label :gender, 'Female', :value => 'female' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :birthdate %><br>
+        <%= f.date_field :birthdate, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :occupation %><br>
+        <%= f.text_field :occupation, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :city %><br>
+        <%= f.text_field :city, class: "form-control" %>
+      </div>
+
+        <div class="form-group">
+          <%= f.label(:tag_list, "Favorite genres") %><br />
+          <%= f.text_field(:tag_list, value: @profile.tag_list.join(","))%>
+        </div>
+
+      <!-- <div class="form-group">
+        <%= f.check_box :comedy, class: "form-control" %>
+        <%= f.label :comedy, 'Comedy'%>
+        <%= f.check_box :adventure, class: "form-control" %>
+        <%= f.label :adventure, 'Adventure'%>
+        <%= f.check_box :drama, class: "form-control" %>
+        <%= f.label :drama, 'Drama'%>
+        <%= f.check_box :action, class: "form-control" %>
+        <%= f.label :action, 'Action'%>
+        <%= f.check_box :thriller, class: "form-control" %>
+        <%= f.label :thriller, 'Thriller'%>
+        <%= f.check_box :horror, class: "form-control" %>
+        <%= f.label :horror, 'Horror'%>
+        <%= f.check_box :romantic_comedy, class: "form-control" %>
+        <%= f.label :romantic_comedy, 'Romantic Comedy'%>
+        <%= f.check_box :musical, class: "form-control" %>
+        <%= f.label :musical, 'Musical'%>
+        <%= f.check_box :documentary, class: "form-control" %>
+        <%= f.label :documentary, 'Documentary'%>
+      </div> -->
+
+      <div class="form-group">
+        <%= f.submit "Update", class: "btn btn-lg btn-primary" %>
+      </div>
+
+    </div>
+  </div>
+<% end %>
+</div>

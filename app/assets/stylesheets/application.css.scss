@@ -24,16 +24,46 @@
 .content-section .video-section{
     max-height: 0px;
     padding: 0 0 0px;
-    }
+}
+
+#mainindexbody {
+  margin-left: 100px;
+}
 
 #main_content #content {
     float: none;
     padding-bottom: 0px;
 }
 
+#tag_cloud {
+    width: 600px;
+    line-height: 1.6em;
+}
+
 header.navbar.navbar-inverse {
     padding: 0;
     margin: 0;
+}
+
+.link #profilepicmain img {
+
+}
+
+.navbar-inverse {
+    background-color: #222;
+    border-color: #090909;
+}
+
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    color: black;
+}
+
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    color: black;
 }
 
 .navbar-default {
@@ -47,6 +77,12 @@ background-color: rgba(71, 71, 71, 0.59);
 min-height: 796px;
 /* Incase of overlay problems just increase the min-height*/
 }
+
+header.navbar.navbar-inverse {
+    padding: 10;
+    margin: 0;
+}
+
 .video-section h1, .video-section h3{
 text-align:center;
 color:#fff;
@@ -57,6 +93,7 @@ color:#fff;
     margin-left: 10px;
     position: relative;
 }
+
 
 #mainpagebuttons {
     text-align: center;
@@ -72,6 +109,8 @@ color:#fff;
     margin-left: 1185px;
     opacity: 0.5;
 }
+
+
 
 .video-section h1{
 font-size: 50px;
@@ -100,10 +139,37 @@ text-shadow: 1px 1px 1px #000;
     border-color: black;
 }
 
+.navbar-default .navbar-nav > li > a {
+    color: white;
+    background-color: rgba(154, 75, 214, 0.58);
+    border-color: #56A4B2;
+}
 
-img {
+#coverimage {
     vertical-align: middle;
     border: solid;
+    margin-left: 800px;
+    margin-bottom: 30px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+#coverimage img {
+    width: 325px;
+    height: 500px;
+}
+
+#plotdescription {
+  width: 700px;
+}
+
+#titlebutton {
+  margin-bottom: 30px;
+}
+
+#scriptinfo {
+  border: dashed yellow;
 }
 
 body {
@@ -153,7 +219,7 @@ body {
 
 #comments_wrapper .lead {
             margin-bottom: 0;
-        }
+  }
 
 .btn-lg, .btn-group-lg > .btn {
     padding: 10px 16px;
@@ -248,17 +314,23 @@ body {
 }
 
 #signinbody {
-    background: url(http://mymaplist.com/img/parallax/back.png);
+    background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);
     background-color: #444;
     background-size: max-height;
-    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);
+    // background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);
+    background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png),url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png),url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);
+
 }
 
 #splashbackground body {
     background: url(http://mymaplist.com/img/parallax/back.png);
     background-color: #444;
     background-size: max-height;
+<<<<<<< HEAD
     background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);
+=======
+    background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png),url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png),url(http://mymaplist.com/img/parallax/back.png);
+>>>>>>> dff1421e6e27d6e23279c0b52cc2289586c8bc38
 }
 
 .vertical-offset-100{
@@ -270,6 +342,190 @@ body {
   color:white;
   text-align: center;
 }
+
+button, input, optgroup, select, textarea {
+    color: black;
+    font: inherit;
+    margin: 0;
+}
+
+
+.panel-default > .panel-heading {
+
+}
+
+.panel-transparent {
+    background: none;
+}
+
+.panel-transparent .panel-heading{
+    background: rgba(122, 130, 136, 0.2)!important;
+}
+
+.panel-transparent .panel-body{
+    background: rgba(46, 51, 56, 0.2)!important;
+}
+
+.panel-primary {
+    border-color: rgba(46, 51, 56, 0.2);
+}
+
+#myModalLabel {
+    background-color: grey;
+
+}
+
+#modalterms {
+  background-color: grey;
+
+}
+
+/*THIS SECTION IS FOR THE UPLOAD SCRIPT AND CREATE PROFILE PAGES*/
+
+#submitscriptblock {
+  padding: 0;
+  float: right;
+}
+
+#buildprofileblock {
+  padding: 0;
+  float: right;
+}
+
+#createprofileblock{
+  width: 600px;
+  position: fixed;
+}
+
+#createprofileblock img{
+  width: 720px;
+  height: 300px;
+}
+
+#uploadinfoblock {
+  width: 600px;
+  position: fixed;
+}
+
+#uploadinfoblock img {
+  width: 450px;
+  height: 400px;
+}
+
+/*THIS SECTION IS THE END OF THE UPLOAD SCRIPT AND CREATE PROFILE PAGES*/
+
+#profilepic img {
+  border-radius: 50%;
+}
+
+#profiletopic {
+  color: #56A4B2;
+  font-size: 30px;
+}
+
+#profileanswer {
+  font-size: 25px;
+}
+
+#profileInfoBlock {
+    width: 600px;
+    margin-left: 300px;
+    margin-top: 0px;
+    position: absolute;
+}
+
+#profileButtons {
+  width: 350px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+}
+/*THIS SECTION IS FOR THE ROTATE OF PROFILE PICTURE*/
+.demo-3 {
+    position:relative;
+    width:300px;
+    height:200px;
+    overflow:hidden;
+    float:left;
+    margin-right:20px
+}
+.demo-3 figure {
+    margin:0;
+    padding:0;
+    position:relative;
+    cursor:pointer;
+    margin-left:0px
+}
+.demo-3 figure img {
+    display:block;
+    position:relative;
+    z-index:10;
+    margin:-15px 0
+}
+.demo-3 figure figcaption {
+    display:block;
+    position:absolute;
+    z-index:5;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box
+}
+.demo-3 figure h2 {
+    font-family:'Lato';
+    color:#fff;
+    font-size:20px;
+    text-align:left
+}
+.demo-3 figure p {
+    display:block;
+    font-family:'Lato';
+    font-size:12px;
+    line-height:18px;
+    margin:0;
+    color:#fff;
+    text-align:left
+}
+.demo-3 figure figcaption {
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    padding:29px 44px;
+    background-color:rgba(26,76,110,0.5);
+    text-align:center;
+    backface-visibility:hidden;
+    -webkit-transform:rotateY(-180deg);
+    -moz-transform:rotateY(-180deg);
+    transform:rotateY(-180deg);
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s
+}
+.demo-3 figure img {
+    backface-visibility:hidden;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+    transition:all .5s;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.demo-3 figure:hover img,figure.hover img {
+    -webkit-transform:rotateY(180deg);
+    -moz-transform:rotateY(180deg);
+    transform:rotateY(180deg)
+}
+.demo-3 figure:hover figcaption,figure.hover figcaption {
+    -webkit-transform:rotateY(0);
+    -moz-transform:rotateY(0);
+    transform:rotateY(0)
+}
+
+
+
+/*END OF SECTION FOR THE ROTATE OF PROFILE PICTURE*/
+
+
   /*==========  Mobile First Method  ==========*/
 
     /* Custom, iPhone Retina */
