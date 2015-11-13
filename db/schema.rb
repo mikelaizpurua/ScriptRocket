@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20151108195141) do
 
   create_table "comments", force: :cascade do |t|
@@ -44,8 +43,6 @@ ActiveRecord::Schema.define(version: 20151108195141) do
 
   add_index "links", ["integer"], name: "index_links_on_integer"
 
-<<<<<<< HEAD
-=======
   create_table "profiles", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -73,7 +70,6 @@ ActiveRecord::Schema.define(version: 20151108195141) do
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
 
->>>>>>> dff1421e6e27d6e23279c0b52cc2289586c8bc38
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
