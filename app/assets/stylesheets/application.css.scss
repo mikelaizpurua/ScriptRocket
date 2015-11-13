@@ -409,14 +409,18 @@ button, input, optgroup, select, textarea {
 
 #profiletopic {
   color: #56A4B2;
+  font-size: 30px;
+}
+
+#profileanswer {
+  font-size: 25px;
 }
 
 #profileInfoBlock {
     width: 600px;
     margin-left: 300px;
-    margin-top: 10px;
+    margin-top: 0px;
     position: absolute;
-
 }
 
 #profileButtons {
@@ -505,6 +509,8 @@ button, input, optgroup, select, textarea {
     -moz-transform:rotateY(0);
     transform:rotateY(0)
 }
+
+
 
 /*END OF SECTION FOR THE ROTATE OF PROFILE PICTURE*/
 
