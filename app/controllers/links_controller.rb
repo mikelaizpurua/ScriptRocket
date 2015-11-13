@@ -8,7 +8,6 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.json
   def index
-    @links = Link.all
     if params[:tag]
        @links = Link.tagged_with(params[:tag])
      else
