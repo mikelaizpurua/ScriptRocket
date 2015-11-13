@@ -11,7 +11,7 @@ class LinksController < ApplicationController
     if params[:tag]
        @links = Link.tagged_with(params[:tag])
      else
-       @links = Link.all
+       @links = Link.all.sort{|x, y| y.votes_for.size <=> x.votes_for.size }
     end
   end
 
