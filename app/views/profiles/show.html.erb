@@ -1,74 +1,44 @@
 <div class="overlay">
 <div class="container">
+
   <br>
   <br>
   <br>
-    <div class="row" id="profilepic">
-        <div class="col-md-3"><%= image_tag @profile.profile_image.url(:medium) %></div>
-            <div class="col-md-3">
-    <li><%= link_to 'Edit Profile', edit_profile_path %></li>
+
+  <div id="profileInfoBlock">
+    <h4><div id="profiletopic">Name:</div> <%= @profile.first_name %> <%= @profile.last_name %></h4>
+    <h4><div id="profiletopic">Occupation:</div> <%= @profile.occupation %></h4>
+    <h4><div id="profiletopic">Location:</div> <%= @profile.city %></h4>
+    <h4><div id="profiletopic">Gender:</div> <%= @profile.gender.capitalize %></h4>
+    <h4><div id="profiletopic">Birthdate:</div> <%= @profile.birthdate %></h4>
     <br>
     <br>
-    <li><%= link_to 'Cancel Account?', edit_user_registration_path %></li></div>
+    <br>    
+  </div>
+
+
+    <div id="profilepic">
+    <%= image_tag @profile.profile_image.url(:medium) %>
     </div>
-    </div>
-    <div class="row">
-    <h4><div class="col-md-3" id="profilename"><%= @profile.first_name %> <%= @profile.last_name %></div></h4>
-    <h4><div class="col-md-3" id="profileoccup"><%= @profile.occupation %></div></h4>
-    <h4><div class="col-md-3" id="profilecity"><%= @profile.city %></div></h4>
-    <h4><div class="col-md-3"><%= @profile.gender.capitalize %></div></h4>
-    <h4><div class="col-md-3"><%= @profile.birthdate %></div></h4>
-    <h4><div class="col-md-6">Favorite Movie Types:</div></h4>
-    </div>
+    
 
     <br><br><br>
+    <h1><div id="profiletopic">Favorite Genres</div></h1>
+    <br>
     <% @profile.tags.any? %>
     <% @profile.tags.each do |tag| %>
     <%= link_to tag.name, tag_path(tag) %>
     <% end %>
 
-    <div class="row">
-        <div class="col-md-6"><% if @profile.comedy %>
-      <div>Comedy</div>
-      <% end %>
-      <% if @profile.adventure %>
-      <div>Adventure</div>
-      <% end %>
-      <% if @profile.drama %>
-      <div>Drama</div>
-      <% end %>
-      <% if @profile.thriller %>
-      <div>Thriller</div>
-      <% end %>
-      <% if @profile.horror %>
-      <div>Horror</div>
-      <% end %>
-      <% if @profile.romantic_comedy %>
-      <div>Romantic Comedy</div>
-      <% end %>
-      <% if @profile.musical %>
-      <div>Musical</div>
-      <% end %>
-      <% if @profile.documentary %>
-      <div>Documentary</div>
-      <% end %></div>
+      <div id="profileButtons">
+      <%= link_to 'Edit Profile', edit_profile_path %>
+      <%= link_to 'Cancel Account?', edit_user_registration_path %>
+      <br><br><br>
     </div>
 
-    <div class="row"></div>
-        <div class="col-md-3">
-      <% if @profile.gender != nil %>
-      <h4>Gender: </h4>
-      <% else %>
-      <h4>Gender: <%= @profile.gender %></h4>
-      <% end %>
-      <h4>DOB: </h4>
-      <h4></h4>
-      <div class="text-left">
 
-      </div>
-    </div>
 
-    <div class="col-md-3">
+   
   <br>
   <br>
   <br>

@@ -46,7 +46,7 @@ header.navbar.navbar-inverse {
 }
 
 .link #profilepicmain img {
- 
+
 }
 
 .navbar-inverse {
@@ -403,7 +403,28 @@ button, input, optgroup, select, textarea {
 
 /*THIS SECTION IS THE END OF THE UPLOAD SCRIPT AND CREATE PROFILE PAGES*/
 
+#profilepic img {
+  border-radius: 50%;
+}
 
+#profiletopic {
+  color: #56A4B2;
+}
+
+#profileInfoBlock {
+    width: 600px;
+    margin-left: 300px;
+    margin-top: 10px;
+    position: absolute;
+
+}
+
+#profileButtons {
+  width: 350px;
+  margin-top: 150px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+}
 /*THIS SECTION IS FOR THE ROTATE OF PROFILE PICTURE*/
 .demo-3 {
     position:relative;
