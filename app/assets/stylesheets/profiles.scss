@@ -6,13 +6,18 @@
   height: 40px;
 }
 
-.tags{
-  margin:0;
-  padding:0;
-  list-style:none;
-}
 
-.tags li, .tags a{
+#tag_cloud {
+      width: 400px;
+      line-height: 1.6em;
+      .s  { font-size: 0.6em; }
+      .m { font-size: 1.0em; }
+      .l   { font-size: 1.6em; }
+    }
+
+
+#tag_cloud li, #tag_cloud a {
+
   float:left;
   height:24px;
   line-height:24px;
@@ -20,11 +25,19 @@
   font-size:11px;
 }
 
+
 .tags a{
   font-family: "Open Sans", sans-serif;
   margin-left:20px;
   padding:0 10px 0 12px;
   background:#0089e0;
+}
+
+#tag_cloud a{
+  font-family: "Open Sans", sans-serif;
+  margin-left:20px;
+  padding:0 10px 0 12px;
+  background:#276e7c;
   color:#fff;
   text-decoration:none;
   -moz-border-radius-bottomright:40px;
@@ -35,7 +48,9 @@
   border-top-right-radius:40px;
 }
 
-.tags a:before{
+
+
+#tag_cloud a:before {
   content:"";
   float:left;
   position:absolute;
@@ -44,11 +59,13 @@
   width:0;
   height:0;
   border-color:transparent #0089e0 transparent transparent;
+  border-color:transparent #686868  transparent transparent;
   border-style:solid;
   border-width:12px 12px 12px 0;
 }
 
-.tags a:after{
+
+#tag_cloud a:after {
   content:"";
   position:absolute;
   top:10px;
@@ -65,10 +82,16 @@
   box-shadow:-1px -1px 2px #004977;
 }
 
+
 .tags a:hover {
   background:#555;
 }
 
-.tags a:hover:before {
+
+#tag_cloud a:hover {
+  background:#555;
+}
+
+#tag_cloud a:hover:before {
   border-color:transparent #555 transparent transparent;
 }
