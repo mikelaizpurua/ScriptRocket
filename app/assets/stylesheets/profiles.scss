@@ -6,6 +6,18 @@
   height: 40px;
 }
 
+#profileInfoBlock {
+    width: 500;
+    margin-left: 300px;
+    margin-top: 20em;
+    position: relative; left:-250px;top:75px;
+}
+
+#profilepic img {
+    border-radius: 50%;
+    position: relative; left: -250px;top:75px;
+}
+
 #tag_cloud {
       width: 400px;
       line-height: 1.6em;
