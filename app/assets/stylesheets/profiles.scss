@@ -6,8 +6,23 @@
   height: 40px;
 }
 
+<<<<<<< HEAD
+=======
+#profileInfoBlock {
+    width: 500;
+    margin-left: 300px;
+    margin-top: 20em;
+    position: relative; left:-250px;top:75px;
+}
+
+#profilepic img {
+    border-radius: 50%;
+    position: relative; left: -250px;top:75px;
+}
+>>>>>>> design
 
 #tag_cloud {
+      position: relative; left: 650px;
       width: 400px;
       line-height: 1.6em;
       .s  { font-size: 0.6em; }
