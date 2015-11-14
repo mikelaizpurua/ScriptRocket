@@ -182,8 +182,12 @@ body {
 }
 
 .navbar-default {
-    background-color: #56A4B2;
+    background-color: #A274FF;
     border-color: #56A4B2;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
 }
 
 
@@ -224,6 +228,7 @@ body {
     font-size: 18px;
     line-height: 1.3333333;
     border-radius: 6px;
+    color: #A274FF;
     color: white;
 }
 
@@ -314,13 +319,16 @@ body {
     background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);
     background-color: #444;
     background-size: max-height;
+    // background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);
     background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png),url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png),url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);
+
 }
 
 #splashbackground body {
     background: url(http://mymaplist.com/img/parallax/back.png);
     background-color: #444;
     background-size: max-height;
+    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);
     background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png),url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png),url(http://mymaplist.com/img/parallax/back.png);
 }
 
