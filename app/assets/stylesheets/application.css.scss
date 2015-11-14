@@ -26,6 +26,8 @@
     padding: 0 0 0px;
 }
 
+
+
 #mainindexbody {
   margin-left: 100px;
 }
@@ -401,7 +403,11 @@ button, input, optgroup, select, textarea {
   height: 400px;
 }
 
-/*THIS SECTION IS THE END OF THE UPLOAD SCRIPT AND CREATE PROFILE PAGES*/
+#favoriteGenresBlock {
+  padding-top: 100px;
+  padding-bottom: 0px;
+  position: relative;
+}
 
 #profilepic img {
   border-radius: 50%;
@@ -425,10 +431,14 @@ button, input, optgroup, select, textarea {
 
 #profileButtons {
   width: 350px;
-  margin-top: 150px;
-  margin-bottom: 100px;
-  margin-left: 50px;
+  margin-left: 800px;
+  margin-bottom: 50px;
 }
+
+
+/*THIS SECTION IS THE END OF THE UPLOAD SCRIPT AND CREATE PROFILE PAGES*/
+
+
 /*THIS SECTION IS FOR THE ROTATE OF PROFILE PICTURE*/
 .demo-3 {
     position:relative;

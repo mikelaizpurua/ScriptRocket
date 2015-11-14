@@ -1,4 +1,4 @@
-<div class="overlay">
+  <div class="overlay">
 <div class="container">
 
   <br>
@@ -21,23 +21,22 @@
     <%= image_tag @profile.profile_image.url(:medium) %>
     </div>
 
+    <div id="favoriteGenresBlock">
+      <h1><div id="profiletopic">Favorite Genres</div></h1>
+      <br>
+      <% @profile.tags.any? %>
+      <% @profile.tags.each do |tag| %>
+      <%= link_to tag.name, tag_path(tag) %>
+      <% end %>
+    </div>
 
-    <br><br><br><br>
-    <h1><div id="profiletopic">Favorite Genres</div></h1>
-    <br>
-    <% @profile.tags.any? %>
-    <% @profile.tags.each do |tag| %>
-    <%= link_to tag.name, tag_path(tag) %>
-    <% end %>
-
-    <% if current_user.profile.id.to_i == params[:id].to_i %>
     <div id="profileButtons">
+    <% if current_user.profile.id.to_i == params[:id].to_i %>
       <%= link_to 'Edit Profile', edit_profile_path %>
       <%= link_to 'Cancel Account?', edit_user_registration_path %>
       <br>
-    </div>
     <% end %>
-
+  </div>
   <br>
   <br>
   <br>
