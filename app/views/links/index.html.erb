@@ -11,11 +11,7 @@
 <% reader = PDF::Reader.new(url) %>
 <!-- Do not remove -->
 
-<div id="tag_cloud">
-  <% tag_cloud Link.tag_counts, %w[s m l] do |tag, css_class| %>
-    <%= link_to tag.name, tag_path(tag.name), class: css_class %>
-  <% end %>
-</div>
+
 
 
 
@@ -48,10 +44,10 @@
 
    <div class="btn-group">
     <a class="btn btn-default btn-sm" href="<%= link.url %>" target="_blank">
-      View Script
+      Read Script
     </a>
 
-    <div class="btn-group">
+    <div class="btn-group" id="voteButtons">
     <%= link_to like_link_path(link), method: :put, class: "btn btn-default btn-sm" do %>
       <span class="glyphicon glyphicon-chevron-up"></span>
         Like

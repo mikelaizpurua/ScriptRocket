@@ -26,7 +26,10 @@
     padding: 0 0 0px;
 }
 
-
+#recentUploads img {
+  width: 110px;
+  height: 163px;
+}
 
 #mainindexbody {
   margin-left: 100px;
@@ -196,6 +199,10 @@ body {
 
 }
 
+#voteButtons a {
+  color: #A274FF;
+}
+
 #main_content #content {
     float: none;
     padding-bottom: 100px;
@@ -209,7 +216,7 @@ body {
 .title a {
       color: #FF4500;
     }
-//
+
 .comments_title {
     margin-top: 2em;
 }
@@ -369,14 +376,8 @@ button, input, optgroup, select, textarea {
     border-color: rgba(46, 51, 56, 0.2);
 }
 
-#myModalLabel {
-    background-color: grey;
-
-}
-
-#modalterms {
+.modal-footer, .modal-header, #modalterms, #myModalLabel {
   background-color: grey;
-
 }
 
 /*THIS SECTION IS FOR THE UPLOAD SCRIPT AND CREATE PROFILE PAGES*/
@@ -418,7 +419,8 @@ button, input, optgroup, select, textarea {
 }
 
 #profilepic img {
-  border-radius: 50%;
+    border-radius: 50%;
+    position: relative; left: -350px;top:75px;
 }
 
 #profiletopic {
@@ -431,10 +433,12 @@ button, input, optgroup, select, textarea {
 }
 
 #profileInfoBlock {
-    width: 600px;
-    margin-left: 300px;
-    margin-top: 0px;
-    position: absolute;
+    width: 500;
+    position: absolute; left:500px;top:105px;
+}
+
+#recentUploads {
+  position: absolute; right: 150px;top:205px;
 }
 
 #profileButtons {

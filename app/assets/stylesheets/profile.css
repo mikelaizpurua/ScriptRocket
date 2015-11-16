@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Slabo+27px);
+@import url(http://fonts.googleapis.com/css?family=Slabo27px);
 
 $font-size: 16px;
 $font-family: 'Slabo 27px', serif; 
@@ -97,7 +97,7 @@ hr {
       margin-bottom: -3em;
       &:hover {
         padding: 0;
-        max-width: calc(120px + 1em);
+        max-width: calc(120px  1em);
         background: lighten($material-blue, 20);
       }
     } // end avatar
@@ -108,10 +108,77 @@ article, footer {
   background: #fff;
   padding: 1em;
 }
-article + footer {padding-top: 0;}
+article  footer {padding-top: 0;}
 
 footer.closure {
   text-align: center;
   font-size: 12px;
   color: #868686;
 }
+
+tags{
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+.tags li, .tags a{
+  float:left;
+  height:24px;
+  line-height:24px;
+  position:relative;
+  font-size:11px;
+}
+
+.tags a{
+  font-family: "Open Sans", sans-serif;
+  margin-left:20px;
+  padding:0 10px 0 12px;
+  background:#0089e0;
+  color:#fff;
+  text-decoration:none;
+  -moz-border-radius-bottomright:40px;
+  -webkit-border-bottom-right-radius:40px;
+  border-bottom-right-radius:40px;
+  -moz-border-radius-topright:40px;
+  -webkit-border-top-right-radius:40px;
+  border-top-right-radius:40px;
+}
+
+.tags a:before{
+  content:"";
+  float:left;
+  position:absolute;
+  top:0;
+  left:-12px;
+  width:0;
+  height:0;
+  border-color:transparent #0089e0 transparent transparent;
+  border-style:solid;
+  border-width:12px 12px 12px 0;
+}
+
+.tags a:after{
+  content:"";
+  position:absolute;
+  top:10px;
+  left:0;
+  float:left;
+  width:4px;
+  height:4px;
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  border-radius:2px;
+  background:#fff;
+  -moz-box-shadow:-1px -1px 2px #004977;
+  -webkit-box-shadow:-1px -1px 2px #004977;
+  box-shadow:-1px -1px 2px #004977;
+}
+
+.tags a:hover {
+  background:#555;
+}
+
+.tags a:hover:before {
+  border-color:transparent #555 transparent transparent;
+} 

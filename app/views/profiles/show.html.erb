@@ -6,12 +6,16 @@
   <br>
 
 <div id="tag_cloud">
+  
   <% tag_cloud Profile.tag_counts, %w[s m l] do |tag, css_class| %>
     <%= link_to tag.name, tag_path(tag.name), class: css_class %>
   <% end %>
 </div>
 
-<div class="profile">
+  <div id="profilepic">
+  <%= image_tag @profile.profile_image.url(:medium) %>
+  </div>
+
   <div id="profileInfoBlock">
     <h4><div id="profiletopic">Name:</div><div id="profileanswer"><%= @profile.first_name %> <%= @profile.last_name %></div></h4>
     <h4><div id="profiletopic">Occupation:</div> <div id="profileanswer"><%= @profile.occupation %></h4>
@@ -24,10 +28,13 @@
 </div>
 
 
+<div id="recentUploads">
+  <h2>Recent Uploads</h2>
+  <% @profile.user.links.each do |link| %>
+    <img src="<%= link.image.url %>" >
+  <% end %>
+</div>
 
-    <div id="profilepic">
-    <%= image_tag @profile.profile_image.url(:medium) %>
-    </div>
 
     <div id="favoriteGenresBlock">
       <h1><div id="profiletopic">Favorite Genres</div></h1>
