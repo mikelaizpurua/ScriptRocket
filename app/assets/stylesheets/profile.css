@@ -1,7 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Slabo27px);
 
+
 $font-size: 16px;
-$font-family: 'Slabo 27px', serif; 
+$font-family: 'Slabo 27px', serif;
 $line-height: 1.667;
 
 $material-blue: #2196F3;
@@ -64,7 +65,7 @@ hr {
   &:hover {color: $material-blue;}
 }
 .alert {
-  color: #E91E63; 
+  color: #E91E63;
   opacity: 0.5;
   &:hover {
     color: #E91E63;

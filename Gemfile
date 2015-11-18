@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.3'
+
 gem 'rails', '4.2.4'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -13,7 +15,6 @@ gem 'bootstrap-sass'
 gem 'paperclip'
 gem 'devise'
 gem 'acts_as_votable'
-gem 'pg'
 gem 'pdf-reader'
 gem 'jbuilder', '~> 2.0'
 gem 'acts-as-taggable-on', '~> 3.4'
