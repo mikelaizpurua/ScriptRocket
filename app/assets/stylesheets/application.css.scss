@@ -265,19 +265,19 @@ body {
 }
 
 #signinbody {
-    /*background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);*/
+    background: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);
     background-color: #444;
     /*background-size: max-height;*/
     /*background: url(http://mymaplist.com/img/parallax/pinlayer2.png), url(http://mymaplist.com/img/parallax/pinlayer1.png), url(http://mymaplist.com/img/parallax/back.png);*/
-    background-image: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png), url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png), url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);
+    /*background-image: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png), url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png), url(https://dl.dropboxusercontent.com/u/27576976/images/parallax1.png);*/
 }
 
 #splashbackground body {
-    /*background: url(http://mymaplist.com/img/parallax/back.png);*/
+    background: url(http://mymaplist.com/img/parallax/back.png);
     background-color: #444;
     /*background-size: max-height;*/
     /*background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);*/
-    background-image: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png), url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png), url(http://mymaplist.com/img/parallax/back.png);
+    /*background-image: url(https://dl.dropboxusercontent.com/u/27576976/images/parallax3.png), url(https://dl.dropboxusercontent.com/u/27576976/images/parallax2.png), url(http://mymaplist.com/img/parallax/back.png);*/
 }
 
 .vertical-offset-100{
@@ -466,14 +466,14 @@ button, input, optgroup, select, textarea {
     height: 150px;
 }
 .demo-3 figure:hover img,figure.hover img {
-    -webkit-transform:rotateY(180deg);
+   /* -webkit-transform:rotateY(180deg);
     -moz-transform:rotateY(180deg);
-    transform:rotateY(180deg)
+    transform:rotateY(180deg)*/
 }
 .demo-3 figure:hover figcaption,figure.hover figcaption {
-    -webkit-transform:rotateY(0);
+    /*-webkit-transform:rotateY(0);
     -moz-transform:rotateY(0);
-    transform:rotateY(0)
+    transform:rotateY(0)*/
 }
 
 
